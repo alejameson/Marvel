@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css'; 
-import fondospm from '../Login/fondospm.png';
+/* import fondospm from '../Login/fondospm.png'; */
 import { Grid, Paper, TextField, Button} from '@mui/material';
 
 

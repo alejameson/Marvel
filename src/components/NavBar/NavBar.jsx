@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Stack } from '@mui/material';
+import { AppBar, Toolbar, Button, Box, Stack } from '@mui/material';
 import './NavBar.css';
 import marvelLogo from './marvel-logo.png';
 
@@ -8,7 +8,7 @@ function NavBar () {
        <AppBar position='static' sx={{bgcolor: '#212121'}}>
          <Toolbar>
             <Box component='div' sx={{ flexGrow: 1}}>
-              <img src={marvelLogo} width="100" height="40"/> 
+              <img src={marvelLogo} alt='logo' width="100" height="40"/> 
             </Box>
             <Stack direction='row' spacing={3}>
               <Button variant="text" color="inherit"> Home </Button>
