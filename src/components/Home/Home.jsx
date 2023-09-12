@@ -18,7 +18,18 @@ function Home() {
         fetchData();
     }, [])
     return (
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <div /* style={{
+            backgroundImage: `url(${require('./marvelBW.jpg')})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "auto",
+            maxWidth: "100%",
+        }} */>
+        <Box sx={{ display: "flex", justifyContent: "center", backgroundImage: `url(${require('./marvelBW.jpg')})`, backgroundAttachment: "fixed"}}>
             <Box container sx={{display: "flex", flexWrap: "wrap", justifyContent: "center"/* , flexDirection: "column", padding: 5 */}}>
                 {personajes.length ?
                     personajes.map(c =>
@@ -39,6 +50,7 @@ function Home() {
                 }   
             </Box>
         </Box>
+        </div>
     )
 }
 export default Home;

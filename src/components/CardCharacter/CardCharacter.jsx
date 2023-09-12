@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 function CardCharacter({id, name, description, img}) {
     const descriptionResume = description.length < 160 ? description : description.slice(1,160) + "..."
     return (
-        <Card sx={{ maxWidth: 345, height: 500, bgcolor:'#212121'}}>
+        <Card sx={{ maxWidth: 345, height: 500, bgcolor:"rgb(237, 29, 36)"}}>
             <CardMedia
                 component="img"
                 alt="green iguana"
