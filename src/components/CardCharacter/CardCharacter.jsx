@@ -8,8 +8,9 @@ import {
     Typography,
     Box
 } from '@mui/material';
+import { Link } from "react-router-dom";
 
-function CardCharacter({name, description, img}) {
+function CardCharacter({id, name, description, img}) {
     const descriptionResume = description.length < 160 ? description : description.slice(1,160) + "..."
     return (
         <Card sx={{ maxWidth: 345, height: 500, bgcolor:'#212121'}}>
@@ -19,7 +20,7 @@ function CardCharacter({name, description, img}) {
                 height="300"
                 image={img}
             />
-            <CardContent>
+            <CardContent sx={{ display: "flex", justifyContent: "center", flexDirection: "column"}}>
                 <Typography gutterBottom variant="h5" component="div" sx={{ color: "white" }}>
                     {name}
                 </Typography>
@@ -27,12 +28,12 @@ function CardCharacter({name, description, img}) {
                     { description !== '' ? descriptionResume : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum exercitationem iste autem velit nulla assumenda est a veritatis, repudiandae nesciunt modi."
                     }
                 </Typography>
+                <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <CardActions>
+                        <Link to={`/characterDetail:${id}`}><Button variant="contained" color="error" sx={{bgcolor:"black"}}>Learn More</Button></Link>
+                    </CardActions>
+                </Box> 
             </CardContent>
-            <Box sx={{display: "flex", justifyContent: "center", }}>
-            <CardActions>
-                <Button variant="contained" color="error" sx={{bgcolor:"black"}}>Learn More</Button>
-            </CardActions>
-            </Box>
         </Card>
     )
 }

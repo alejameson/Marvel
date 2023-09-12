@@ -25,6 +25,7 @@ function Home() {
                         <Box sx={{padding: 5, marginTop:'80px'}}>
                             <CardCharacter
                                 key={c.id}
+                                id={c.id}
                                 name={c.name}
                                 description={c.description}
                                 img={c.thumbnail.extension === "jpg" ? c.thumbnail.path + ".jpg" : c.thumbnail.path + ".gif"}
