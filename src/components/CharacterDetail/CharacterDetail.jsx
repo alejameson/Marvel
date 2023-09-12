@@ -14,8 +14,8 @@ function CharacterDetail() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
       {
@@ -70,45 +70,47 @@ function CharacterDetail() {
   return (
     <div className='container'>
       {personaje.length ? (
-        <Container sx={{maxWidth:'xl'}}>
-            <Grid sx={{mt:20}} container columnSpacing={2}>
-                <Grid item xs={5}>
-                   <Typography variant="h4" gutterBottom fontWeight="bold">
-                        {personaje[0].name}
-                   </Typography>
-                   <Typography variant="h6" gutterBottom>
-                        {personaje[0].description}
-                   </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                    <img src={thumbnailSrc} style={{width:"100%", borderRadius:"1em"}} alt="Character" />
-                </Grid>             
+        <Container sx={{ maxWidth: 'xl' }}>
+          <div className='detailContainer'>
+            <Grid sx={{ mt: 5 }} container columnSpacing={2}>
+              <Grid item xs={5}>
+                <Typography variant="h4" gutterBottom fontWeight="bold">
+                  {personaje[0].name}
+                </Typography>
+                <Typography variant="h6" gutterBottom>
+                  {personaje[0].description}
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <img src={thumbnailSrc} style={{ width: "100%", borderRadius: "1em" }} alt="Character" />
+              </Grid>
             </Grid>
 
-         {/* Carousel */}
-
-         <Slider {...settings}>
-        {comics?.map((item) => (
-          <div className="card">
-            <div className="card-top">
-              <img
-                src={thumbnailSrc}           
-                alt="comic"
-              />
-              <h1>{comics.title}</h1>
-            </div>
-            <div className="card-bottom">
-              <h3>{comics.title}</h3>
-              <span className="category">{comics.title}</span>
-            </div>
+            {/* Carousel */}
+            <Slider {...settings}>
+              <div className='carouselContainer'>
+              {comics?.map((item) => (
+                <div className="card">
+                  <div className="card-top">
+                    <img
+                      src={thumbnailSrc}
+                      alt="comic"
+                    />
+                    <h1>{comics.title}</h1>
+                  </div>
+                  <div className="card-bottom">
+                    <h3>{comics.title}</h3>
+                    <span className="category">{comics.title}</span>
+                  </div>
+                </div>
+              ))}
+              </div>
+            </Slider>
           </div>
-        ))}
-      </Slider>
-
         </Container>
       ) : (
-        <Box sx={{display: "flex", justifyContent: "center", mt: 4}}>
-            <CircularProgress/>    
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+          <CircularProgress />
         </Box>
       )}
     </div>
