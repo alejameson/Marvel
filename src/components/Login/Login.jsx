@@ -23,8 +23,7 @@ function Login () {
     console.log(user, 'USER');
     console.log(password, 'PASSWORD');
     alert('Welcome');
-    navigate("/");
-
+    navigate("/home");
   } 
 
 

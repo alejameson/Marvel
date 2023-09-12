@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Button, Box, Stack } from '@mui/material';
+import { Link } from "react-router-dom";
 import './NavBar.css';
 import marvelLogo from './marvel-logo.png';
 
@@ -11,9 +12,9 @@ function NavBar () {
               <img src={marvelLogo} alt='logo' width="100" height="40"/> 
             </Box>
             <Stack direction='row' spacing={3}>
-              <Button variant="text" color="inherit"> Home </Button>
-              <Button variant="text" color="inherit"> About </Button>
-              <Button variant="text" color="inherit"> Login </Button>
+              <Link to={"/home"}><Button variant="text" color="inherit"> Home </Button></Link>
+              <Link to={"/home"}><Button variant="text" color="inherit"> About </Button></Link>
+              <Link to={"/"}><Button variant="text" color="inherit"> Login </Button></Link>
             </Stack>
          </Toolbar>
        </AppBar>

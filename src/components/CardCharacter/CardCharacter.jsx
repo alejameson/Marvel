@@ -30,7 +30,7 @@ function CardCharacter({id, name, description, img}) {
                 </Typography>
                 <Box sx={{display: "flex", justifyContent: "center"}}>
                     <CardActions>
-                        <Link to={`/characterDetail:${id}`}><Button variant="contained" color="error" sx={{bgcolor:"black"}}>Learn More</Button></Link>
+                        <Link to={`/characterDetail/${id}`}><Button variant="contained" color="error" sx={{bgcolor:"black"}}>Learn More</Button></Link>
                     </CardActions>
                 </Box> 
             </CardContent>

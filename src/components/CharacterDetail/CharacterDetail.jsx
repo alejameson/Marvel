@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Container, Typography, Grid, CircularProgress } from '@mui/material';
 import { getChatacterById, getComicsChatacterById } from '../../Api';
+import { useParams } from "react-router";
 import './CharacterDetail.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,6 +10,8 @@ import 'slick-carousel/slick/slick-theme.css';
 function CharacterDetail() {
   const [personaje, setPersonaje] = useState([{}]);
   const [comics, setComics] = useState([{}]);
+
+  const { id } = useParams();
 
   const settings = {
     dots: true,
@@ -48,8 +51,9 @@ function CharacterDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const dataPersonaje = await getChatacterById();
-        const dataComics = await getComicsChatacterById();
+        console.log(id, 'ID PJ');
+        const dataPersonaje = await getChatacterById(id);
+        const dataComics = await getComicsChatacterById(id);
         /* console.log(dataPersonaje); */
         setPersonaje(dataPersonaje);
         console.log(dataComics);
