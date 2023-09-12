@@ -20,3 +20,15 @@ export const getChatacters = async() => {
     const response = await instance.get(URL);
     return response.data.data.results;
 }
+
+export const getChatacterById = async() => {
+    const URL = "/characters/1017100?ts=1&apikey=212dbf5bfa695f13238bdf8e94da92db&hash=2c49771beaf98b9400f980fc76ff3853";
+    const response = await instance.get(URL);
+    return response.data.data.results;
+}
+
+export const getComicsChatacterById = async() => {
+    const URL = "/characters/1017100/comics?ts=1&apikey=212dbf5bfa695f13238bdf8e94da92db&hash=2c49771beaf98b9400f980fc76ff3853";
+    const response = await instance.get(URL);
+    return response.data.data.results;
+}

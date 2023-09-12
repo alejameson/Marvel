@@ -5,7 +5,7 @@ import marvelLogo from './marvel-logo.png';
 
 function NavBar () {
     return(
-       <AppBar position='static' sx={{bgcolor: '#212121'}}>
+       <AppBar position='fixed' sx={{bgcolor: '#212121'}}>
          <Toolbar>
             <Box component='div' sx={{ flexGrow: 1}}>
               <img src={marvelLogo} alt='logo' width="100" height="40"/> 

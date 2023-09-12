@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getChatacters } from '../../Api';
-import { Box, Grid } from '@mui/material';
+import { Box } from '@mui/material';
 import CardCharacter from '../CardCharacter/CardCharacter';
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
             <Box container sx={{display: "flex", flexWrap: "wrap", justifyContent: "center"/* , flexDirection: "column", padding: 5 */}}>
                 {personajes.length ?
                     personajes.map(c =>
-                        <Box sx={{padding: 5}}>
+                        <Box sx={{padding: 5, marginTop:'80px'}}>
                             <CardCharacter
                                 key={c.id}
                                 name={c.name}
@@ -40,20 +40,4 @@ function Home() {
         </Box>
     )
 }
-
-{/* <div>
-            {personajes.length ? 
-                personajes.map(c => <CardCharacter
-                    key={c.id}
-                    name={c.name}
-                    img={c.thumbnail.path + ".jpg"}
-
-                  /> )
-                :
-                <div>
-                    Home
-                </div>
-            }
-        </div> */}
-
 export default Home;

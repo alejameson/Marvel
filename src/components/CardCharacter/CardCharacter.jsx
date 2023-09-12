@@ -12,7 +12,7 @@ import {
 function CardCharacter({name, description, img}) {
     const descriptionResume = description.length < 160 ? description : description.slice(1,160) + "..."
     return (
-        <Card sx={{ maxWidth: 345, height: 500, backgroundImage: 'linear-gradient(90deg, rgba(171,16,16,1) 30%, rgba(2,0,36,1) 48%, rgba(255,0,50,1) 100%)' }}>
+        <Card sx={{ maxWidth: 345, height: 500, bgcolor:'#212121'}}>
             <CardMedia
                 component="img"
                 alt="green iguana"
