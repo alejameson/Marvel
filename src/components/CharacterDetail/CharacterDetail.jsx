@@ -78,10 +78,10 @@ function CharacterDetail() {
           <div className='detailContainer'>
             <Grid sx={{ mt: 5 }} container columnSpacing={2}>
               <Grid item xs={5}>
-                <Typography variant="h4" gutterBottom fontWeight="bold">
+                <Typography variant="h4" gutterBottom fontWeight="bold" sx={{color:'white'}}>
                   {personaje[0].name}
                 </Typography>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" gutterBottom sx={{color:'white'}}> 
                   {personaje[0].description}
                 </Typography>
               </Grid>
@@ -91,7 +91,8 @@ function CharacterDetail() {
             </Grid>
 
             {/* Carousel */}
-            <Slider {...settings}>              
+           
+            <Slider {...settings} className="carouselContainer">              
                 {comics?.map((item) => (
                   <div className="card">
                     <div className="card-top">
@@ -99,16 +100,15 @@ function CharacterDetail() {
                         src={item?.thumbnail ? item.thumbnail.extension === 'jpg' ? item.thumbnail.path + '.jpg' : item.thumbnail.path + '.gif' : ''}
                         alt="comic"
                       />
-                      <h1>{item.title}</h1>
                     </div>
                     <div className="card-bottom">
                       <h3>{item.title}</h3>
-                      <span className="category">{item.title}</span>
+                      <span className="category">{item.format}</span>
                     </div>
                   </div>
                 ))}
             </Slider>
-          </div>
+            </div>
         </Container>
       ) : (
         <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>

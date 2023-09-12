@@ -9,22 +9,39 @@
   width: 100%;
 }
 
+.detailContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid 2px rgb(42, 42, 42);
+  padding: 10px 40px; /* Reduce el padding para achicar el espacio del container */
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.915); 
+  border-radius: 20px;
+}
+
+.carouselContainer{
+  margin-top: 50px;
+  }
+
 .card {
-  border: 1px solid #fff;
   background: black;
   border-radius: 8px;
   overflow: hidden;
-  height: 300px;
-  max-width: 200px;
+  height: 400px;
+  max-width: 250px;
   color: #fff;
   cursor: pointer;
-  background-color: rgb(57, 57, 57);
+  background-color: rgb(24, 24, 24);
 }
 
 .card-top h1 {
   font-size: 0.9rem;
   margin: 20px;
-  background-color: green;
+  color: #fff;
 }
 
 .card-top > img {
@@ -52,42 +69,19 @@
   height: 2px;
 }
 
-.detailContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: solid 2px rgb(42, 42, 42);
-  padding: 20px; /* Reduce el padding para achicar el espacio del container */
-  width: 100%;
-  margin-top: 100px;
-  background-color: aqua; 
-}
-
-.carouselContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-/* Modificaciones en el CSS para achicar la distancia entre los componentes del carousel y permitir que se mueva por toda la pantalla */
-
 .slick-slide > div {
-  margin: 0 5px; /* Reduce el margen horizontal de los elementos del carousel */
+  margin: 0 5px; 
 }
 
 .slick-list {
-  margin: 0 -5px; /* Ajusta el margen horizontal de la lista del carousel */
+  margin: 0 -5px; 
 }
 
 .card {
-  /* Ajusta el ancho del card para hacerlo más estrecho */
-  width: 150px; /* Puedes ajustar este valor según tus necesidades */
-  margin: 0 5px; /* Ajusta el margen horizontal entre los cards */
+  width: 150px; 
+  margin: 0 5px; 
 }
 
-/* Permite que el carousel se mueva por toda la pantalla */
 .slick-slider {
   width: 100%;
   overflow: hidden;
