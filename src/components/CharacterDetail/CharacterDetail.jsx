@@ -91,24 +91,22 @@ function CharacterDetail() {
             </Grid>
 
             {/* Carousel */}
-            <Slider {...settings}>
-              <div className='carouselContainer'>
-              {comics?.map((item) => (
-                <div className="card">
-                  <div className="card-top">
-                    <img
-                      src={thumbnailSrc}
-                      alt="comic"
-                    />
-                    <h1>{comics.title}</h1>
+            <Slider {...settings}>              
+                {comics?.map((item) => (
+                  <div className="card">
+                    <div className="card-top">
+                      <img
+                        src={item?.thumbnail ? item.thumbnail.extension === 'jpg' ? item.thumbnail.path + '.jpg' : item.thumbnail.path + '.gif' : ''}
+                        alt="comic"
+                      />
+                      <h1>{item.title}</h1>
+                    </div>
+                    <div className="card-bottom">
+                      <h3>{item.title}</h3>
+                      <span className="category">{item.title}</span>
+                    </div>
                   </div>
-                  <div className="card-bottom">
-                    <h3>{comics.title}</h3>
-                    <span className="category">{comics.title}</span>
-                  </div>
-                </div>
-              ))}
-              </div>
+                ))}
             </Slider>
           </div>
         </Container>
