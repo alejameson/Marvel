@@ -20,15 +20,15 @@ function Login () {
 
   const handleOnClick = (e) => {
     e.preventDefault();
+    if (user === 'admin' && password === '123') {
+      alert('Welcome');
+      navigate('/home');
+    } else {
+      alert('Nombre de usuario o contraseña incorrectos');
+    }
     console.log(user, 'USER');
-    console.log(password, 'PASSWORD');
-    alert('Welcome');
-    navigate("/home");
+    console.log(password, 'PASSWORD'); 
   } 
-
-
-
-
 
   return (
     <div className='loginContainer'>
