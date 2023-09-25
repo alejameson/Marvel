@@ -1,6 +1,6 @@
 # Marvel App
 
-Marvel App es una App creada con Javascript y React en el Front y consumiendo una Api para mostrar los Datos de los distintos personajes de Marvel.
+Marvel App es una App creada con Javascript, React y Material UI en el Front y consumiendo una Api para mostrar los Datos de los distintos personajes de Marvel.
 La App cuenta con un Login, un Home para seleccionar un personaje y una seccion para mostrar los Detalles del personaje
 
 ## Imagenes
